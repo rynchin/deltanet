@@ -49,15 +49,15 @@ Let `tril(·, k)` be lower-triangular including the \(k\)-th diagonal, `diag(β)
 For chunk `i`:
 
 ```math
-A = I + \operatorname{tril}\!\big(\operatorname{diag}(\beta)\, K K^\top,\,-1\big)
+A = I + \mathrm{tril}\!\big(\mathrm{diag}(\beta)\, K K^\top,\ -1\big)
 ```
 
 ```math
-W = A^{-1}\big(\operatorname{diag}(\beta)\, K\big)
+W = A^{-1}\big(\mathrm{diag}(\beta)\, K\big)
 ```
 
 ```math
-U = A^{-1}\big(\operatorname{diag}(\beta)\, V\big)
+U = A^{-1}\big(\mathrm{diag}(\beta)\, V\big)
 ```
 
 ```math
@@ -65,7 +65,7 @@ X = U - W S^\top
 ```
 
 ```math
-O = Q S^\top + \operatorname{tril}\!\big(Q K^\top,\,0\big)\, X
+O = Q S^\top + \mathrm{tril}\!\big(Q K^\top,\,0\big)\, X
 ```
 
 ```math
@@ -74,5 +74,5 @@ S \leftarrow S + X^\top K
 
 ### Backward pass
 
-For the math, refer ![here](assets/deltanet-math.pdf).
+For the math, see [the derivation](assets/deltanet-math.pdf).
 
